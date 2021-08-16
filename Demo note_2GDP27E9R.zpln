@@ -3,7 +3,7 @@
     {
       "text": "%pyspark\nimport os\ncwd \u003d os.getcwd()\nprint(cwd)",
       "user": "anonymous",
-      "dateUpdated": "2021-08-16 13:25:18.898",
+      "dateUpdated": "2021-08-16 14:56:59.832",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -37,14 +37,117 @@
       "jobName": "paragraph_1629120226376_549162531",
       "id": "paragraph_1629120226376_549162531",
       "dateCreated": "2021-08-16 13:23:46.376",
-      "dateStarted": "2021-08-16 13:25:18.922",
-      "dateFinished": "2021-08-16 13:25:49.849",
+      "dateStarted": "2021-08-16 14:56:59.853",
+      "dateFinished": "2021-08-16 14:57:31.915",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n#reading a file from shared folder\nspan \u003d spark.read.parquet(\"/data/span-parquet/0.json.parquet\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-08-16 15:39:26.699",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://7da4c427599f:4040/jobs/job?id\u003d2"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1629120318919_1985447908",
+      "id": "paragraph_1629120318919_1985447908",
+      "dateCreated": "2021-08-16 13:25:18.920",
+      "dateStarted": "2021-08-16 15:39:26.717",
+      "dateFinished": "2021-08-16 15:39:28.099",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nspan.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-08-16 15:34:59.027",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------------+----------------+-------------+-----------------+-----------+-----------------+-----------------+-----------------------------+---------------------------------+----------------+----------------+------------------------------+----------------------+----------------+-----------------------+--------------------+------------+---------+----------------+\n|           timestamp| destination_address|destination_port|event_outcome|observer_hostname|span_action|span_db_statement|span_db_user_name|span_destination_service_name|span_destination_service_resource|span_duration_us|span_http_method|span_http_response_status_code|span_http_url_original|         span_id|span_message_queue_name|           span_name|span_subtype|span_type|  transaction_id|\n+--------------------+--------------------+----------------+-------------+-----------------+-----------+-----------------+-----------------+-----------------------------+---------------------------------+----------------+----------------+------------------------------+----------------------+----------------+-----------------------+--------------------+------------+---------+----------------+\n|2021-07-09T14:45:...|       10.240.153.19|            1521|      unknown|   lxfunmonapmv1p|      query|                 |                 |                       oracle|                           oracle|            2455|                |                             0|                      |ee9cee4cd3a8d13e|                       |SELECT FROM V_TOT...|      oracle|       db|28319b380119e184|\n|2021-07-09T14:45:...|       10.240.153.19|            1521|      unknown|   lxfunmonapmv1p|      query|                 |                 |                       oracle|                           oracle|            8412|                |                             0|                      |8c60f90c1a8b9085|                       |SELECT FROM V_CUS...|      oracle|       db|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            2627|                |                             0|                      |13e22ade609cde0f|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            5439|                |                             0|                      |fb06b716e1a26a3c|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            1550|                |                             0|                      |78d47458257ea123|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|     tibcop.dc.ht.hr|            9008|      success|   lxfunmonapmv1p|           |                 |                 |         http://tibcop.dc....|             tibcop.dc.ht.hr:9008|          115150|            POST|                           200|  http://tibcop.dc....|ce03c7dedf2a5c26|                       |POST tibcop.dc.ht.hr|        http| external|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            1116|                |                             0|                      |cd05e1ca3aefba4f|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            1349|                |                             0|                      |c764c1633465963e|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            3088|                |                             0|                      |48b5d1ce524ed41a|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|       10.240.153.19|            1521|      unknown|   lxfunmonapmv1p|      query|                 |                 |                       oracle|                           oracle|           14187|                |                             0|                      |3c34dd41e161fe72|                       |SELECT FROM V_CUS...|      oracle|       db|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            1352|                |                             0|                      |fc069abcfdbaef73|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            2396|                |                             0|                      |3c85ccb87b7a54d4|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            1022|                |                             0|                      |d56e15e22b6a5c90|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            2834|                |                             0|                      |7d101451e86b058d|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            2662|                |                             0|                      |5cb129efaebafa91|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|28319b380119e184|\n|2021-07-09T14:45:...|                    |               0|      unknown|   lxfunmonapmv1p|           |                 |                 |                             |                                 |           22635|                |                             0|                      |c643dce21f1ba7d9|                       |GET https://wso2p...|        http| external|28319b380119e184|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            2645|                |                             0|                      |a7b0c364183542ec|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|772d4f8911ef4b87|\n|2021-07-09T14:45:...|lxfunmonkfkv2p.dc...|            9092|      unknown|   lxfunmonapmv1p|       send|                 |                 |                        kafka|             kafka/usageconsum...|            1113|                |                             0|                      |9c1a708630a9174e|   usageconsumption....|KafkaProducer#sen...|       kafka|messaging|772d4f8911ef4b87|\n|2021-07-09T14:45:...|                    |               0|      unknown|   lxfunmonapmv1p|           |                 |                 |                             |                                 |           42519|                |                             0|                      |564623ff6ee12005|                       |GET http://172.30...|        http| external|28319b380119e184|\n|2021-07-09T14:45:...|     tibcop.dc.ht.hr|            9008|      success|   lxfunmonapmv1p|           |                 |                 |         http://tibcop.dc....|             tibcop.dc.ht.hr:9008|          143497|            POST|                           200|  http://tibcop.dc....|723000d045d8f97d|                       |POST tibcop.dc.ht.hr|        http| external|772d4f8911ef4b87|\n+--------------------+--------------------+----------------+-------------+-----------------+-----------+-----------------+-----------------+-----------------------------+---------------------------------+----------------+----------------+------------------------------+----------------------+----------------+-----------------------+--------------------+------------+---------+----------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://7da4c427599f:4040/jobs/job?id\u003d1"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1629122077948_2133969681",
+      "id": "paragraph_1629122077948_2133969681",
+      "dateCreated": "2021-08-16 13:54:37.948",
+      "dateStarted": "2021-08-16 15:34:59.044",
+      "dateFinished": "2021-08-16 15:35:03.254",
       "status": "FINISHED"
     },
     {
       "text": "%pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "2021-08-16 13:25:18.920",
+      "dateUpdated": "2021-08-16 15:34:59.043",
       "progress": 0,
       "config": {},
       "settings": {
@@ -54,9 +157,9 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1629120318919_1985447908",
-      "id": "paragraph_1629120318919_1985447908",
-      "dateCreated": "2021-08-16 13:25:18.920",
+      "jobName": "paragraph_1629128099043_1674245304",
+      "id": "paragraph_1629128099043_1674245304",
+      "dateCreated": "2021-08-16 15:34:59.043",
       "status": "READY"
     }
   ],
