@@ -145,14 +145,30 @@
       "status": "FINISHED"
     },
     {
-      "text": "%pyspark\n",
+      "text": "%pyspark\nimport pandas as pd\nimport matplotlib.pyplot as plt",
       "user": "anonymous",
-      "dateUpdated": "2021-08-16 15:34:59.043",
+      "dateUpdated": "2021-08-16 23:49:47.820",
       "progress": 0,
-      "config": {},
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
       "settings": {
         "params": {},
         "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
       },
       "apps": [],
       "runtimeInfos": {},
@@ -160,7 +176,91 @@
       "jobName": "paragraph_1629128099043_1674245304",
       "id": "paragraph_1629128099043_1674245304",
       "dateCreated": "2021-08-16 15:34:59.043",
-      "status": "READY"
+      "dateStarted": "2021-08-16 23:49:47.847",
+      "dateFinished": "2021-08-16 23:49:48.184",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nfrom sklearn.model_selection import train_test_split",
+      "user": "anonymous",
+      "dateUpdated": "2021-08-16 23:50:41.208",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)\n\u001b[0;32m\u003cipython-input-16-73edc048c06b\u003e\u001b[0m in \u001b[0;36m\u003cmodule\u003e\u001b[0;34m\u001b[0m\n\u001b[0;32m----\u003e 1\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0msklearn\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmodel_selection\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mtrain_test_split\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\n\u001b[0;31mModuleNotFoundError\u001b[0m: No module named \u0027sklearn\u0027"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1629151970706_964377603",
+      "id": "paragraph_1629151970706_964377603",
+      "dateCreated": "2021-08-16 22:12:50.707",
+      "dateStarted": "2021-08-16 23:50:41.236",
+      "dateFinished": "2021-08-16 23:50:42.082",
+      "status": "ERROR"
+    },
+    {
+      "text": "%pyspark\nfrom sklearn.svm import SVR",
+      "user": "anonymous",
+      "dateUpdated": "2021-08-16 23:52:09.727",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)\n\u001b[0;32m\u003cipython-input-20-eda8ae4a6cf8\u003e\u001b[0m in \u001b[0;36m\u003cmodule\u003e\u001b[0;34m\u001b[0m\n\u001b[0;32m----\u003e 1\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0msklearn\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msvm\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mSVR\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\n\u001b[0;31mModuleNotFoundError\u001b[0m: No module named \u0027sklearn\u0027"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1629157841235_2025043949",
+      "id": "paragraph_1629157841235_2025043949",
+      "dateCreated": "2021-08-16 23:50:41.235",
+      "dateStarted": "2021-08-16 23:52:09.754",
+      "dateFinished": "2021-08-16 23:52:11.093",
+      "status": "ERROR"
     }
   ],
   "name": "Demo note",
